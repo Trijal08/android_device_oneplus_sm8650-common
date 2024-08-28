@@ -19,4 +19,14 @@
     <dimen name="horizontal_max_shift">5.0dp</dimen>
     <dimen name="vertical_max_shift">4.0dp</dimen>
 
+    <!-- Adaptive Alert Vibration -->
+    <bool name="config_adaptive_alert_vibration_enabled">true</bool>
+    <!-- Clear Calling -->
+    <bool name="config_clear_calling_enabled">true</bool>
+    <!-- Show device header in device info -->
+    <bool name="config_show_device_header_in_device_info">true</bool>
+    <!-- Reverse Charging -->
+    <bool name="config_show_reverse_charging">true</bool>
+    <!-- Smart Storage -->
+    <bool name="config_show_smart_storage_toggle">true</bool>
 </resources>
