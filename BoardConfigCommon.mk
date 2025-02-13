@@ -80,8 +80,12 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/oplus/vintf/device_framework_matrix.xml \
-    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/yaap/config/device_framework_matrix.xml
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml
+ifdef ROM_VENDOR
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/$(ROM_VENDOR)/config/device_framework_matrix.xml
+else
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/lineage/config/device_framework_matrix.xml
+endif
 
 # Touch HIDL custom matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += $(COMMON_PATH)/touch-hidl_matrix.xml
