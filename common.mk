@@ -56,8 +56,6 @@ PRODUCT_PACKAGES += \
     audio.primary.pineapple \
     audio.usb.default \
     audio.r_submix.default \
-    libagm \
-    libats \
     libagm_compress_plugin \
     libagm_mixer_plugin \
     libagm_pcm_plugin \
@@ -577,11 +575,6 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     qti_telephony_utils_prd.xml \
     telephony-ext
-
-ifneq ($(TARGET_BUILD_GAPPS),true)
-PRODUCT_PACKAGES += \
-    OpenEUICC
-endif
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
