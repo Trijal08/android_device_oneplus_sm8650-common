@@ -57,7 +57,6 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.usb.default \
     audio.r_submix.default \
-    libagmmixer \
     libagm_compress_plugin \
     libagm_mixer_plugin \
     libagm_pcm_plugin \
@@ -581,11 +580,6 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils_prd.xml \
     telephony-ext
 
-ifneq ($(TARGET_BUILD_GAPPS),true)
-PRODUCT_PACKAGES += \
-    OpenEUICC
-endif
-
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml \
@@ -604,7 +598,6 @@ $(call soong_config_set,qti_thermal,netlink,true)
 
 # Touch
 PRODUCT_PACKAGES += \
-    TouchGestures \
     vendor.lineage.touch@1.0-service.oplus
 
 $(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(LOCAL_PATH)/touch/include)
