@@ -38,6 +38,10 @@ PRODUCT_PACKAGES += \
     KeyHandler \
     tri-state-key-calibrate
 
+PRODUCT_PACKAGES += \
+    OPlusSystemUIOverlay \
+    OPlusAlertSliderOverlay
+
 # Audio
 SOONG_CONFIG_NAMESPACES += android_hardware_audio
 SOONG_CONFIG_android_hardware_audio += \
