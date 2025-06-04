@@ -52,7 +52,6 @@ PRODUCT_PACKAGES += \
     audio.primary.pineapple \
     audio.usb.default \
     audio.r_submix.default \
-    libagmmixer \
     libagm \
     libats \
     libagm_compress_plugin \
@@ -292,7 +291,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    fstab.qcom.vendor_ramdisk \
     init.class_main.sh \
     init.oplus.rc \
     init.kernel.post_boot.sh \
@@ -591,9 +589,7 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,qti_thermal,netlink,true)
 
 # Touch
-PRODUCT_PACKAGES += \
-    TouchGestures \
-    vendor.lineage.touch@1.0-service.oplus
+PRODUCT_PACKAGES += vendor.lineage.touch@1.0-service.oplus
 
 $(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(LOCAL_PATH)/touch/include)
 
